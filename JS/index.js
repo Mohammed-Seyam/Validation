@@ -36,10 +36,10 @@ myBtn.onclick = function () {
 const errors = (element, message) => {
 
     const inputControl = element.parentElement
-
+    
     errorDisplay = inputControl.querySelector(".error");
     errorDisplay.innerText = message;
-
+    
     element.classList.add("err");
     element.classList.remove("suc");
     console.dir(inputControl);
@@ -47,8 +47,9 @@ const errors = (element, message) => {
 }
 
 const sucess = (element) => {
+    const inputControl = element.parentElement
 
-    errorDisplay = document.querySelector(".error");
+    errorDisplay = inputControl.querySelector(".error");
     errorDisplay.innerText = "";
     element.classList.remove('err')
     element.classList.add('suc')
